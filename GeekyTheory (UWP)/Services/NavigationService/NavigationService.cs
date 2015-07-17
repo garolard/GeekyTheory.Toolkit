@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using GeekyTheory.Core;
 
 namespace GeekyTheory.Services
 {

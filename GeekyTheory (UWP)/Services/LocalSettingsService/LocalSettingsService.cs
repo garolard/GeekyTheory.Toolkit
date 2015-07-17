@@ -1,5 +1,4 @@
 ﻿using Windows.Storage;
-using GeekyTheory.Core.Services;
 
 namespace GeekyTheory.Services
 {

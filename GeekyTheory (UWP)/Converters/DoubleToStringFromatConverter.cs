@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 using Windows.UI.Xaml.Data;
 
 namespace GeekyTheory.Converters
@@ -15,7 +12,7 @@ namespace GeekyTheory.Converters
             if (double.TryParse(value.ToString(), out retValue))
             {
                 var format = (string)parameter;
-                var culture = System.Globalization.CultureInfo.CurrentCulture;
+                var culture = CultureInfo.CurrentCulture;
                 culture.NumberFormat.CurrencyNegativePattern = 1;
                 return retValue.ToString(format ?? "N", culture);
 
