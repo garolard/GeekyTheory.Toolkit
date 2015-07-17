@@ -6,6 +6,9 @@ A Windows Platform Toolkit to simplify #dev life
 ### How to use it
 Simply fork this project and add to your solution or add his dynamic libarary as Reference
 
+* Now you can download it as a Nuget Package! Try it now!
+`PM> Install-Package GeekyTheory.Toolkit`
+
 ###License
 
     Copyright 2014 GeekyTheory (Dachi Gogotchuri)
