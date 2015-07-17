@@ -1,6 +1,11 @@
 # GeekyTheory.Toolkit
 A Windows Platform Toolkit to simplify #dev life
 
+- This version is beta and only supports Universal Windows Platform (UWP)
+
+### How to use it
+Simply fork this project and add to your solution or add his dynamic libarary as Reference
+
 ###License
 
     Copyright 2014 GeekyTheory (Dachi Gogotchuri)
