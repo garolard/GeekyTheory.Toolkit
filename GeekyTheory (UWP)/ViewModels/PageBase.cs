@@ -6,9 +6,21 @@ namespace GeekyTheory.ViewModels
     public class PageBase : Page
     {
         private ViewModelBase vm;
+        private Frame splitViewFrame;
 
-        public PageBase()
+
+        public Frame SplitViewFrame
         {
+            get { return splitViewFrame; }
+            set
+            {
+                splitViewFrame = value;
+
+                if (vm == null)
+                    vm = (ViewModelBase) this.DataContext;
+
+                vm.SetSplitFrame(splitViewFrame);
+            }
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -16,22 +28,14 @@ namespace GeekyTheory.ViewModels
             base.OnNavigatedTo(e);
 
             vm = (ViewModelBase)this.DataContext;
-            if (vm != null)
-            {
-                vm.OnNavigatedTo(e);
-            }
+            vm.SetAppFrame(this.Frame);
+            vm.OnNavigatedTo(e);
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
             base.OnNavigatedFrom(e);
             vm.OnNavigatedFrom(e);
-        }
-
-        protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
-        {
-            base.OnNavigatingFrom(e);
-            vm.OnNavigatingFrom(e);
         }
     }
 }
